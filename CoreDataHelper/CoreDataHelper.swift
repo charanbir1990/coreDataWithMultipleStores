@@ -20,7 +20,7 @@ class CoreDataHelper {
     }
     
     lazy var persistentCoordinator1: NSPersistentStoreCoordinator? = {
-        guard let path = Bundle.main.url(forResource: "CoreDataHelper", withExtension: "momd") else {
+        guard let path = Bundle.main.url(forResource: "CoreDataHelper.momd/CoreDataHelperNew", withExtension: "mom") else {
             fatalError()
         }
         guard let model = NSManagedObjectModel(contentsOf: path) else {
@@ -28,7 +28,7 @@ class CoreDataHelper {
         }
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         var url = getDocumentsDirectory()
-        url = url.appendingPathComponent("storeOne.sqlite", isDirectory: false)
+        url = url.appendingPathComponent("storeOneNew.sqlite", isDirectory: false)
         print(url)
         let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
         do {

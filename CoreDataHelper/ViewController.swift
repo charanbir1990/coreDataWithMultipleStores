@@ -11,15 +11,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Login.save(context: CoreDataHelper.shared.context1, name: "charan")
-        Login.save(context: CoreDataHelper.shared.context2, name: "aman")
+//        Login.save(context: CoreDataHelper.shared.context1, name: "abc")
         for obj in Login.get(context:  CoreDataHelper.shared.context1) {
             print("store1", obj.name)
         }
 
-        for obj in Login.get(context:  CoreDataHelper.shared.context2) {
-            print("store2", obj.name)
-        }
+//        Login.save(context: CoreDataHelper.shared.context2, name: "aman")
+//        for obj in Login.get(context:  CoreDataHelper.shared.context2) {
+//            print("store2", obj.name)
+//        }
     }
 
 
